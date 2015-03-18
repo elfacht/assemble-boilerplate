@@ -1,0 +1,23 @@
+htaccess
+.htaccess
+/.htaccess
+ai-cache/*
+node_modules/*
+wp-content/backup/*
+wp-content/cache/*
+wp-content/infinitewp/*
+wp-content/upgrade/*
+wp-content/uploads/*
+wp-content/w3tc-config/*
+sitemap.*
+wp-config.php
+
+# Hidden system files
+*.DS_Store
+*[Tt]humbs.db
+*.Trashes
+@eaDir/*
+@eaDir
+
+# Include these files in previously blocked directories
+!wp-content/uploads/.htaccess

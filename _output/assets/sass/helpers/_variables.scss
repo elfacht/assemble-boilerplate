@@ -1,0 +1,33 @@
+/**
+ * VARIABLES
+ */
+
+
+
+// Grid
+$em-base: 16px !default;
+@function emCalc($pxWidth) {
+  @return $pxWidth / $em-base * 1em;
+}
+
+$gutter:        emCalc(20px);
+$row-width:     emCalc(1280px);
+$column-gutter: $gutter;
+
+
+
+// Transition
+$base-transition:       all 0.15s ease-in-out;
+
+
+
+// Typography
+$font-stack:            Helvetica, Arial, sans-serif;
+$base-font:             $font-stack;
+$base-serif-font:       serif;
+$base-font-size:        100%;
+$base-line-height:      1.4;
+$base-font-weight:      400;
+$thin-font-weight:      200;
+
+$font-size-m:  emCalc(16px);

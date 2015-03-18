@@ -1,0 +1,50 @@
+/**
+ * COLORS
+ */
+
+
+
+// Palette settings
+$_color-base-grey:      #555;
+$_color-base-accent:    #1BBC9B;
+
+$palettes: (
+    accent: (
+        base:   $_color-base-accent,
+        light:  lighten($_color-base-accent, 10%),
+        dark:   darken($_color-base-accent, 10%),
+    ),
+    grey: (
+        base:     $_color-base-grey,
+        light:    lighten($_color-base-grey, 10%),
+        lighter:  lighten($_color-base-grey, 15%),
+        dark:     darken($_color-base-grey, 10%),
+        darker:   darken($_color-base-grey, 15%)
+    )
+);
+
+
+
+// Palette function,
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+
+
+// Basics
+$color-black:           #000;
+$color-white:           #fff;
+
+
+
+// Accent colors
+$color-accent:          palette(accent);
+$color-accent-dark:     palette(accent, dark);
+
+
+
+// Base colors
+$base-text-color:       palette(grey, darker);
+$base-background:       #fff;
+$base-link-color:       $color-accent-dark;

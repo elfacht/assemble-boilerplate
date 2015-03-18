@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}} | {{site.title}}</title>
+  {{> foo-head-meta }}
+  {{> foo-styles }}
+</head>
+
+<body class="{{bodyClass}}">
+
+<ul>
+  {{#each pages}}
+    {{#is data.type 'mainPage'}}
+    <li><a href ="{{basename}}.html">{{basename}}</a></li>
+    {{/is}}
+  {{/each}}
+</ul>
+
+
+
+<ul>
+  {{#each pages}}
+    {{#is data.type 'metaPage'}}
+    <li><a href ="{{basename}}.html">{{basename}}</a></li>
+    {{/is}}
+  {{/each}}
+</ul>
+
+
+{{> foo-bottom-scripts }}
+{{#block "pageScripts"}}
+{{/block}}
+
+</body>
+</html>
