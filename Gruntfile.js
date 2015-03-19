@@ -25,8 +25,8 @@ module.exports = function (grunt) {
     uglify: {
         build: {
           options: {
-            banner: '/*! <%= pkg.name %>-v<%= pkg.version %> ' +
-              '<%= grunt.template.today("yyyy-mm-dd") %> */\n',
+            // banner: '/*! <%= pkg.name %>-v<%= pkg.version %> ' +
+            //   '<%= grunt.template.today("yyyy-mm-dd") %> */\n',
             sourceMap: true
           },
           src: '<%= config.assets %>/js/main.js',
@@ -39,15 +39,15 @@ module.exports = function (grunt) {
         options: {
           sourceMap: true,
           includePaths: [
-            '<%= config.assets %>/sass/base/',
-            '<%= config.assets %>/sass/helpers/',
-            '<%= config.assets %>/sass/layout/',
-            '<%= config.assets %>/sass/vendor/'
+            '<%= config.assets %>/scss/base/',
+            '<%= config.assets %>/scss/helpers/',
+            '<%= config.assets %>/scss/layout/',
+            '<%= config.assets %>/scss/vendor/'
           ],
           outputStyle: 'compressed'
         },
         files: {
-          '<%= config.assets %>/css/main.css': '<%= config.assets %>/sass/main.scss'
+          '<%= config.assets %>/css/main.css': '<%= config.assets %>/scss/main.scss'
         }
       }
     },
@@ -93,7 +93,7 @@ module.exports = function (grunt) {
       css: {
         files: [
           '<%= config.src %>/templates/**/**/*.scss',
-          '<%= config.assets %>/sass/**/**/*.scss'
+          '<%= config.assets %>/scss/**/**/*.scss'
         ],
         tasks: ['sass', 'newer:copy'],
         options: {
