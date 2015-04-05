@@ -29,5 +29,8 @@
     "grunt-sass": "^0.18.1",
     "matchdep": "^0.3.0"
   },
+  "scripts": {
+    "test": "grunt --verbose"
+  },
   "private": true
 }

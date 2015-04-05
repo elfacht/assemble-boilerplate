@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/elfacht/assemble-boilerplate.svg)](https://travis-ci.org/elfacht/assemble-boilerplate)
+
 # assemble-boilerplate
 Boilerplate for static sites with Assemble, Grunt and Sass
 
